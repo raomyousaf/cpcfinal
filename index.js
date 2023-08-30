@@ -29,8 +29,14 @@ app.use(express.json());
 
 
 app.get('/', (req, res) => {
-   res.render("./Dashboard");
+   res.render("./login"); 
+   console.log("test");
   })
   
+  app.post("/dashboard", (req, res) => {
+    res.render("Dashboard");
+  });
+
+
 
 app.listen(process.env.PORT);
